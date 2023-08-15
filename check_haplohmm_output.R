@@ -1,6 +1,10 @@
-
-
-# check output of haplohmm and see if any failed
+# AUTHOR
+#  Robyn L Ball, PhD (robyn dot ball at jax dot org)
+# PURPOSE
+#  checks that haplohmm.py siccessfully completed for each strain and each region in the chr
+# INPUT
+#       chr     integer or character denoting the chromosome
+#
 check_haplohmm_output <- function(chr) {
   options(stringsAsFactors = FALSE)
   indir <- paste0("../data/out/",chr, "/imputation_data/") 
