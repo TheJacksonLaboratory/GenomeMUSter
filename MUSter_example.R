@@ -1,3 +1,8 @@
+# AUTHOR
+#  Robyn L Ball, PhD (robyn dot ball at jax dot org)
+# PURPOSE
+#  provide users with an example dataset and code to run the pipeline
+#
 # to run this on example data, unzip datasets.tar.gz and set indir to the location of these data
 #
 # Example parameter values
