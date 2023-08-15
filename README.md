@@ -12,7 +12,9 @@ Data from sixteen variation datasets (Table 1)  were merged by chromosome and wi
 
 Code is provided for a segment of the genome, i.e. chr, start, end. For purposes of demonstration, we provide data for a small region.
 
-Use **MUSter_example.R** for a walkthrough of the process and refer to notes below.
+## MUSter_example.R provides a vignette walkthrough of the process
+
+additional notes provided below
 
 ## MERGE DATASETS
 
