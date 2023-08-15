@@ -1,3 +1,15 @@
+# AUTHOR
+#  Robyn L Ball, PhD (robyn dot ball at jax dot org)
+# PURPOSE
+#	calculated co-occurring missingness from missing_indices
+# INPUT
+#	index1		indices that are missing allelic state calls for the target strain
+#	strain_names	character vector, potential optimal predictor strain names
+#	missing_idx	list od missing indices for each strain
+# OUTPUT
+#	miss		vector of number of co-occurring missing between the target strain and potential predictor strains
+#
+# NOTES
 # num_missing takes the indices of the imputed region (index1) and a character vector of strains of interest (strain_names), 
 #   and the missing indices across all SNPs for all strains
 # it returns the number missing in the imputed region for each strain in strain_names

@@ -1,4 +1,15 @@
-
+# AUTHOR
+#  Robyn L Ball, PhD (robyn dot ball at jax dot org)
+# PURPOSE
+#  checks for indices for which there are too few observed calls (< 5 observed allelic states)
+#	these we cannot reliable impute.
+# INPUT
+#       dd:              dataframe with SNPs as rows and strains as columns
+#	strain_cols	numeric vector if strain columns in dd
+#	nstrain		integer, default=5 (require observed allelic states for at least nstrain
+# OUTPUT
+#		indices in dd to be removed
+# NOTES
 # call this once
 # returns indices of SNPs in dataframe dd that should be removed 
 # from genotyping imputation due to too few observations

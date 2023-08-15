@@ -1,5 +1,14 @@
-# fills in consensus SNP calls and returns a cleaned dataset
-
+# AUTHOR
+#  Robyn L Ball, PhD (robyn dot ball at jax dot org)
+# PURPOSE
+#  replaces allelic state calls with consensus calls, cleans up dataset
+# INPUT
+#       df:             dataframe with SNPs as rows and strains as columns
+#	called:		dataframe, consensus calls
+#	mismatches:	dataframe, could not reach consensus
+# OUTPUT
+#	cleaned:	dataframe
+# 	
 make_clean <- function(df=df, called=called, mismatches=mismatches) {
   cleaned <- df
   mstrains <- unique(called$strain)

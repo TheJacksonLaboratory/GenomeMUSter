@@ -1,4 +1,13 @@
-
+# AUTHOR
+#  Robyn L Ball, PhD (robyn dot ball at jax dot org)
+# PURPOSE
+#  caclulates the pairwise phylogenetic distance across all strains in the dataset
+# INPUT
+#       X:	dataframe with rows as SNP and columns as strain
+# OUTPUT
+# 	d:	square array that contains the numeric phylogenetic distances among strains in X                     
+#
+# NOTES
 # caclulates the pairwise phylogenetic distance across all strains in the dataset
 # takes a dataframe X with rows as SNP and columns as strain
 # returns an square array d of the phylogenetic distances between strains

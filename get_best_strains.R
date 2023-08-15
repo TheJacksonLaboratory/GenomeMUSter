@@ -1,4 +1,18 @@
-
+# AUTHOR
+#  Robyn L Ball, PhD (robyn dot ball at jax dot org)
+# PURPOSE
+#  for each target strain in inputs, identifies the optimal predictor strains 
+#	based on co-occuring missingness and phylogenetic distance 
+# INPUT
+#       df:           	dataframe with SNPs as rows, strains as columns
+#	inputs:		list of lists for each strain
+#	cols:		integer vector of strain columns in df
+#	outdir:		character, output directory
+#	strain_idx:	integer, first column that is a strain in df, assumed that all columns after this column are strains
+# OUTPUT
+#	included_stats	dataframe containing summary statistics for each strain
+#
+#
 get_best_strains <- function(df, inputs, cols, outdir, strain_idx=5) {
   source("num_missing.R")
   source("get_votes.R")

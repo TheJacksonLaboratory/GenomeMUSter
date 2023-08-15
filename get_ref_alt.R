@@ -1,6 +1,14 @@
-
-# returns reference and alternate nucleotides over all strains in the dataset
-
+# AUTHOR
+#  Robyn L Ball, PhD (robyn dot ball at jax dot org)
+# PURPOSE
+#  returns the reference, alternate, and third allelic state calls
+# INPUT
+#       x:              vector of allelic state calls with names(x)=strains
+# OUTPUT
+# 	out		character, reference/alternate/third
+# NOTES
+# if reference is unknown, reference = "N"
+#
 get_ref_alt <- function(x) {
   if ("C57BL/6J" %in% names(x)) {
     out <- as.character(x[which(names(x)=="C57BL/6J")])

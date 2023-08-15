@@ -1,7 +1,14 @@
-
-# gets the row frequencies of A, T, C, G, H, N
-# where H = het and N = either NA or ""
-
+# AUTHOR
+#  Robyn L Ball, PhD (robyn dot ball at jax dot org)
+# PURPOSE
+#  calculates row frequencies of allelic state calls
+# INPUT
+#       x:      	dataframe or array of character entries 
+# OUTPUT
+#       freq_out:      array of 6 columns that contains the frequencies
+#			of each genotype call for a given row (SNP)
+#			A, T, C, G, H, N, where H = het and N = either NA or ""
+#
 get_freq <- function(x) {
   n <- ncol(x)
   input <- apply(x, 1, as.character)

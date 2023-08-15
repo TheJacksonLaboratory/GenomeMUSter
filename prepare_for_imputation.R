@@ -1,3 +1,5 @@
+# AUTHOR
+#  Robyn L Ball, PhD (robyn dot ball at jax dot org)
 # PURPOSE
 # Prepare data needed for imputation
 # INPUT
@@ -23,9 +25,7 @@ prepare_for_imputation <- function(chr, start, end, strain_idx=5) {
   # read in the merged datafile on the specified region
   indir <- paste0("../data/out/", chr, "/")
   infile <- paste0(indir, "merged_chr", chr, "_", start, "-", end, ".csv")
-  df <- fread(infile, sep=",", skip=1, header=F, data.table=FALSE)
-  cnames <- read.csv(infile, skip=0, header=F, nrows = 1)
-  colnames(df) <- cnames
+  df <- fread(infile, sep=",", data.table=FALSE)
   #
   ddir <- paste0(indir, "distance/")
   if (!dir.exists(ddir)) {
@@ -48,7 +48,7 @@ prepare_for_imputation <- function(chr, start, end, strain_idx=5) {
   snp_remove <- which_remove(df, scols, nstrain = 5)
   print(paste0("There are less that 4 known genotypes for ", length(snp_remove), " SNPs. No imputation will be done for these SNPs."))
   #
-  df <- df[-snp_remove, ]
+  if (length(snp_remove) > 0) df <- df[-snp_remove, ]
   #
   is.nucleo <- function(x) {x %in% c("A","C","T","G","H")}
   # inputs is where we will store the strain-specific data needed to run haploQA HMM

@@ -1,11 +1,20 @@
-# calculates the consensus call across all datasets
-#   ignores blanks and NAs
-#   returns a data.frame of calls if consensus was reached (clear majority)
-#   returns a data.frame of mismatches where no consensus was reached (ties)
-#
-# mm is a  data.frame of all unique genomic locations with mismatches
+# AUTHOR
+#  Robyn L Ball, PhD (robyn dot ball at jax dot org)
+# PURPOSE
+#  calculates the consensus call across all datasets
+#   	ignores blanks and NAs
+# INPUT
+#       mm:            	dataframe of all unique genomic locations with mismatches
+#	dataset:	list for each dataset used in the merging process
+# OUTPUT
+#	list(	called,	        dataframe of consensus calls (clear majority)
+#		mismatches,	dataframe of mismatches that could not be called (ties)
+#		compliments	dataframe of mismatches that were compliment calls	
+# NOTES
 # filenames is a vector of filenames of the datasets
 # pnames are the dataset names
+#
+#
 get_consensus <- function(mm, dataset) {
   # source functions
   source("consensus.R")

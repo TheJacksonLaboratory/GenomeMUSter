@@ -1,6 +1,13 @@
-
-
-# function that calculates the proportion agreement among a dataset call and the consensus call
+# AUTHOR
+#  Robyn L Ball, PhD (robyn dot ball at jax dot org)
+# PURPOSE
+#  calculates the proportion of agreement between a dataset allelic state calls and the consenus calls
+# INPUT
+#       x:            numeric vector of dataset calls
+#	consensus:	numeric vector of consensus calls
+# OUTPUT
+#			numeric mean agreement
+#
 get_agreement <- function(x, consensus) {
   compare <- which(!is.na(x) & x != "")
   if (length(compare) > 0) {

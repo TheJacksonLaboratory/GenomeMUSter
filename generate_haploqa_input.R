@@ -1,25 +1,21 @@
-## Author: Robyn L Ball (robyn.ball@jax.org)
-## Date: Feb 5, 2020
-
-## This script is for running on the cluster
-
-## It takes as input
-##  1. the set of inputs already created (x) in spath, 
-##  2. the dataframe (dd) with all known SNP reads on the region,
-##  3. and the spath which is the directory where all data for this strain is stored
-
-## It requires the code 'df_to_numeric.R'
-
-## For the strain in x$strain, it outputs 
-##  1. snps: snps that were kept and used in the imputation
-##  2. snp_removed: indices in dd of the snps that were removed from the imputation step (insuffucuent information)
-##  3. haplotype_ab_codes: input to the HMM 
-##  4. observation_ab_codes: input to the HMM
-##  5. test: set aside test set for this region 
-
-## For the strain in x$strain, it
-##  1. Copies over the haplohmm code
-
+# AUTHOR
+#  Robyn L Ball, PhD (robyn dot ball at jax dot org)
+# PURPOSE
+#  for a given strain, creates input files for the HMM (haplohmm.py) from observed data. Copies over haplohmm.py to the strain directory
+# INPUT
+#       dd:             dataframe (df is default) of observed allele state calls in the region
+#	x:		list of inputs for a strain in a region (strain = strain name, d = phylogenetic distance)
+#	outdir:		character directory where strain data are stored
+#	testset:	logical (default=TRUE) for whether there is a hold out test set
+#
+# OUTPUT
+#                       snps.csv: SNPs that were kept and used in the imputation process
+#			snp_removed.csv: indices in dd of the snps that were removed from the imputation step (insuffucuent information)
+#			haplotype_ab_codes.csv: input to the HMM (observed data from optimal predictor strains)
+#			observation_ab_codes.csv: input to the HMM (observed target strain data)
+#			test.csv: set aside test set for this strain and region 
+#
+#
 generate_haploqa_input <- function(dd=df, x=inputs[[i]], outdir=outdir, testset=TRUE) {
   source("df_to_numeric.R")
   source("get_strain_name.R")

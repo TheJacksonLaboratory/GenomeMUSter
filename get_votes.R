@@ -1,5 +1,12 @@
-# gets major, minor, and third alleles as well as probability of minor allele
-
+# AUTHOR
+#  Robyn L Ball, PhD (robyn dot ball at jax dot org)
+# PURPOSE
+#  identifies the major, minor, and third alleles as well as probability of minor allele
+# INPUT
+#       X:              dataframe with SNPs as rows and strains as columns
+# OUTPUT
+#	xx:		dataframe with SNPs as rows and major, minor, third, and p(minor allele)
+#
 get_votes <- function(X) {
   xx <- data.frame(major=rep("NA",nrow(X)), minor=rep("NA", nrow(X)), third=rep("NA", nrow(X)))
   votes <- function(x) {

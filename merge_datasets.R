@@ -1,3 +1,7 @@
+# AUTHOR
+#  Robyn L Ball, PhD (robyn dot ball at jax dot org)
+# PURPOSE
+# merge and harmonize across variant datasets
 # INPUTS
 #   chr: chromsome, e.g., 1, 2, ..., X, Y, M
 #   start: start bp of the region

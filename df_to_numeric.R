@@ -1,10 +1,14 @@
-
-# Takes a dataframe, X, of snp calls (snps are rows, strains are columns)
-# and a dataframe of allele calls (major in column 1, minor in column 2, third call in column 3)
-# X and alleles have snp calls equal to A, C, G, T, H, "", NA, N
-#
-# Returns a dataframe of 0, 1, 2, 3 where the mjor allele maps to 1, 
-# minor allele maps to 2, third call maps to 3, and no call maps to 0
+# AUTHOR
+#  Robyn L Ball, PhD (robyn dot ball at jax dot org)
+# PURPOSE
+# Prepares genotype data for HaploQA by converting genotypes to numbers
+# INPUT
+#       X:        	dataframe with genomic location (SNP) as rows and strains as columns
+#       alleles:        dataframe of allele calls for each SNP in X
+#				major in column 1, minor in column 2, third call in column 3
+# OUTPUT
+#       Y:            	dataframe of 0, 1, 2, 3 where the major allele maps to 1, 
+# 				minor allele maps to 2, third call maps to 3, and no call maps to 0
 #
 #
 df_to_numeric <- function(X, alleles) {
