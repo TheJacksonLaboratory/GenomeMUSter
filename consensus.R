@@ -1,5 +1,11 @@
-# votes is a vector of the votes across all datasets
-# returns the majority vote or returns NA if no consensus could be reached
+# AUTHOR
+#  Robyn L Ball, PhD (robyn dot ball at jax dot org)
+# PURPOSE
+#  identifies the majority vote (consensus) across datasets for a strain and site.
+# INPUT
+#       votes   character vector of allelic state calls across datasets
+# OUTPUT
+#       c       consensus allelic state, or NA if no consensus was reached
 consensus <- function(votes) {
   c <- prop <- NA
   tb <- table(unlist(votes[which(!is.na(votes) & votes!="")]))
