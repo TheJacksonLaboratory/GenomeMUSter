@@ -1,4 +1,5 @@
-
+# to run this on example data, unzip datasets.tar.gz and set indir to the location of these data
+#
 # Example parameter values
 chr <- 1
 start <- 103000029
