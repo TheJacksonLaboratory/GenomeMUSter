@@ -10,7 +10,9 @@
 #	if it doesn't exist, creates the phylogenetic distance matrix D
 #	{indir}/distance/distance_chr{chr}_{start}-{end}.RDS
 #	inputs:	list of length(number of strains) --> stores the strain-specific data needed to run haploQA HMM
-
+# NOTES
+# indir is set to ../data/out/ If the merged data are in a different directory, change indir
+#
 prepare_for_imputation <- function(chr, start, end, strain_idx=5) {
   options(stringsAsFactors = FALSE)
   library(ape) # for phylogenetic distance
