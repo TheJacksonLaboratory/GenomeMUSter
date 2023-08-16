@@ -7,5 +7,5 @@
 
 cd STRAIN/
 module load singularity
-singularity exec /projects/chesler-lab/phenome/snp_grid/v2/code/sif/python36.sif python haplohmm.py 
+singularity exec {PATH_TO_PYTHON.SIF}/python36.sif python haplohmm.py 
 
