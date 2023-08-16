@@ -1,4 +1,4 @@
- AUTHOR
+# AUTHOR
 #  Robyn L Ball, PhD (robyn dot ball at jax dot org)
 # PURPOSE
 #  collects the haploqa results for each strain on a given region (chr, start, end)
