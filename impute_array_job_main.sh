@@ -15,5 +15,5 @@ sample=$(sed "${SLURM_ARRAY_TASK_ID}q;d" ${config})
 
 cd ../data/out/CHR/imputation_data/CHR_DIR/${sample}
 echo "Processing ${sample}"
-singularity exec /projects/chesler-lab/phenome/snp_grid/v2/code/sif/python36.sif python haplohmm.py
+singularity exec {PATH_TO_PYTHON_SIF}/python36.sif python haplohmm.py
 
