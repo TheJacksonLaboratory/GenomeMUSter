@@ -3,8 +3,8 @@ GenomeMUSter is available at https://muster.jax.org/
 
 Please cite:
 GenomeMUSter mouse genetic variation service enables multi-trait, multi-population data integration and analyses
-Robyn L. Ball*, Molly A. Bogue, Hongping Liang, Anuj Srivastava, David G. Ashbrook, Anna Lamoureux, Matthew W. Gerring, Alexander S. Hatoum, Matthew Kim, Hao He, Jake Emerson, Alexander K. Berger, David O. Walton, Keith Sheppard, Baha El Kassaby, Francisco Castellanos, Govind Kunde-Ramamoorthy, Lu Lu, John Bluis, Sejal Desai, Beth A. Sundberg, Gary Peltz, Zhuoqing Fang, Gary A. Churchill, Robert W. Williams, Arpana Agrawal, Carol J. Bult, Vivek M. Philip, Elissa J. Chesler.
-bioRxiv 2023.08.08.552506; doi: https://doi.org/10.1101/2023.08.08.552506
+Robyn L. Ball*, Molly A. Bogue, Hongping Liang, Anuj Srivastava, David G. Ashbrook, Anna Lamoureux, Matthew W. Gerring, Alexander S. Hatoum, Matthew J Kim, Hao He, Jake Emerson, Alexander K. Berger, David O. Walton, Keith Sheppard, Baha El Kassaby, Francisco Castellanos, Govindarajan Kunde-Ramamoorthy, Lu Lu, John Bluis, Sejal Desai, Beth A. Sundberg, Gary Peltz, Zhuoqing Fang, Gary A. Churchill, Robert W. Williams, Arpana Agrawal, Carol J. Bult, Vivek M. Philip, Elissa J. Chesler.
+Genome Research; doi: https://doi:10.1101/gr.278157.123
 
 *Robyn L. Ball, PhD (email: robyn.ball at jax dot org)
 
